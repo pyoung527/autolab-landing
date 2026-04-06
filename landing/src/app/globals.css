@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0A1F44;
+  --color-accent: #00E5FF;
+  --color-bg-dark: #050B1A;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #A0AEC0;
+
+  --shadow-glow: 0 0 20px rgba(0, 229, 255, 0.5);
+  --shadow-glow-lg: 0 0 40px rgba(0, 229, 255, 0.4);
+  --shadow-glow-sm: 0 0 10px rgba(0, 229, 255, 0.3);
+
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #050B1A;
+  color: #FFFFFF;
+  font-family: "Pretendard Variable", "Pretendard", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: rgba(10, 31, 68, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 229, 255, 0.15);
+}
+
+/* Neon text */
+.text-neon {
+  color: #00E5FF;
+  text-shadow: 0 0 20px rgba(0, 229, 255, 0.6);
+}
+
+/* Glow button */
+.btn-glow {
+  background: #00E5FF;
+  color: #050B1A;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.btn-glow:hover {
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.7), 0 0 60px rgba(0, 229, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Neon border */
+.neon-border {
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  box-shadow: inset 0 0 20px rgba(0, 229, 255, 0.05);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #050B1A; }
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 229, 255, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(0, 229, 255, 0.5); }
+
+/* Selection */
+::selection {
+  background: rgba(0, 229, 255, 0.3);
+  color: white;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #00E5FF, #0070FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Section spacing */
+.section-padding {
+  padding: 5rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding { padding: 7rem 2rem; }
+}
+
+@media (min-width: 1024px) {
+  .section-padding { padding: 8rem 2rem; }
+}
