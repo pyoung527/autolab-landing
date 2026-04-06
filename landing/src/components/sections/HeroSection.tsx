@@ -90,7 +90,7 @@ export function HeroSection({ onCtaClick }: HeroSectionProps) {
               <p className="text-[#00E5FF] text-sm font-semibold tracking-widest uppercase mb-4">
                 Research Automation Solution
               </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold text-white leading-tight mb-6">
                 아직도 실험실에서
                 <br />
                 밤을 지새우고 계신가요?
@@ -107,7 +107,11 @@ export function HeroSection({ onCtaClick }: HeroSectionProps) {
                 </span>
               </h1>
               <p className="text-[#A0AEC0] text-lg md:text-xl mb-10 max-w-lg leading-relaxed">
-                당신의 실험을 자동화하는 데 집중합니다.
+                당신의{" "}
+                <span className="text-white font-semibold bg-[#00E5FF]/10 px-1 rounded">실험</span>을{" "}
+                <span className="text-white font-semibold bg-[#00E5FF]/10 px-1 rounded">자동화</span>하는 데{" "}
+                <span className="text-[#00E5FF] font-bold">초.집.중!</span>{" "}
+                합니다.
                 <br />
                 반복 작업은 우리가, 발견은 당신이.
               </p>
